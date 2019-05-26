@@ -1,0 +1,24 @@
+#include <stdio.h> 
+#include <stdlib.h> 
+
+int main(void) 
+{ 
+	FILE *fptr;
+	char word;
+	int count=0;
+	fptr=fopen("C:\\couse.txt","r");
+	if(fptr!=NULL)
+	{
+		while((word=getc(fptr))!=EOF)
+		{
+			printf("%c",word);
+			count++;
+		}
+		fclose(fptr);
+	}
+	else
+		printf("檔案開啟失敗!!\n");
+		printf("\n");
+system("pause"); 
+return 0; 
+} 
